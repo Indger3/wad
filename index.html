@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content=
+"width=device-width, initial-scale=1">
+    <title>table demo</title>
+    <link rel="stylesheet" href=
+"https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+    <script src=
+"https://code.jquery.com/jquery-3.2.1.min.js">
+    </script>
+    <script src=
+"https://code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js">
+    </script>
+</head>
+  
+<body>
+    <center>
+        <div data-role="page">
+            <h1 style="color:#6060a3;">
+                College Website
+            </h1>
+            <h3>Trinity Academy Of Engineering</h3>
+            <div data-role="header" id="GFG">
+                <div role="main" class="ui-content">
+                    <table data-role="table">
+                        <thead>
+                            <tr>
+                                <th>Department</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Information Technology</td>
+                                <td><a href="https://www.kjei.edu.in/tae/it_about_dept.php"
+                                        data-rel="external">
+                                        Trinity Academy Of Engineering
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Computer</td>
+                                <td><a href="https://www.kjei.edu.in/tae/comp_about_dept.php"
+                                        data-rel="external">
+                                        Trinity Academy Of Engineering
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>E&TC</td>
+                                <td><a href="https://www.kjei.edu.in/tae/entc_about_dept.php"
+                                        data-rel="external">
+                                        Trinity Academy Of Engineering
+                                    </a>
+                                </td>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </center>
+    <script>
+        $(document).ready(function () {
+            $("#GFG").table({
+                classes: {
+                    "classes.Name": "GeeksforGeeks"
+                }
+            });
+            $("#GFG").table("option", "classes.Name", "GeeksforGeeks");
+            $("#Button").on('click', function () {
+                var a = $("#GFG").table("option", "classes.Name");
+                $("#log").html(a);
+            });
+        });
+    </script>
+</body>
+  
+</html>
